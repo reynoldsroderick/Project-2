@@ -37,12 +37,16 @@
 
     <div class="clearfix"></div>
 
+    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>
+
     <div id="industry-chart">
         <strong>By County</strong> (y-axis: Residents below the Poverty Line, x-axis: 2017 County Population)
         <a class="reset" href="javascript:industryChart.filterAll();dc.redrawAll();" style="display: none;  ">Reset</a>
 
         <div class="clearfix"></div>
     </div>
+
+    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>
 
     <div class="clearfix"></div>
 
@@ -150,7 +154,7 @@
                 })
                     .title(function (d) {
                         var f = d3.format(".2f") // SF Added; formats the Tooltip to 2 decimal places
-                        return "State: " + d.key + "\nln.153 Population under the Poverty Line : " + (f(numberFormat(d.value ? d.value : 0)/1000000)) + " Million";
+                        return "State: " + d.key + "\nPopulation under the Poverty Line : " + (f(numberFormat(d.value ? d.value : 0)/1000000)) + " Million";
                     }); // SF Value for tooltip for State; Can also be divided by 1,000,000   // var f = d3.format(".1f")
 
             industryChart.width(990)
@@ -183,7 +187,7 @@
                     .title(function (p) {
                         return p.key
                                 + "\n"
-                                + "ln.186 Population: " + numberFormat(p.value.amountPopulation) // SF Value in tooltips hover
+                                + "Population: " + numberFormat(p.value.amountPopulation) // SF Value in tooltips hover
                                 + "  Poverty: " + numberFormat(p.value.poverty);  // SF Value in tooltips hover
                     });
             industryChart.yAxis().tickFormat(function (s) {
@@ -223,7 +227,7 @@
                     .title(function (p) {
                         return p.key
                                 + "\n"
-                                + "ln.226 Population: " + numberFormat(p.value.amountPopulation)  // SF Value in tooltips hover
+                                + "Population: " + numberFormat(p.value.amountPopulation)  // SF Value in tooltips hover
                                 + "  Poverty: " + numberFormat(p.value.poverty);  // SF Value in tooltips hover
                     });
             roundChart.yAxis().tickFormat(function (s) {
