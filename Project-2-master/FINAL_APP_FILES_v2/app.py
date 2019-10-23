@@ -89,7 +89,7 @@ def names():
 ############################# Geojson Data Route##############
 @app.route("/Interactivemap")
 def mapnbubble ():
-	return render_template("Interativeindex.html")
+	return render_template("Interactiveindex.html")
 
 # 	return jsonify(geojson-data)
 
