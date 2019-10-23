@@ -40,7 +40,7 @@
     <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>
 
     <div id="industry-chart">
-        <strong>By County</strong> (y-axis: Residents below the Poverty Line, x-axis: 2017 County Population)
+        <strong>By County</strong> (y-axis: Residents below the Poverty Line in Thousands,      x-axis: 2017 County Population in Thousands)
         <a class="reset" href="javascript:industryChart.filterAll();dc.redrawAll();" style="display: none;  ">Reset</a>
 
         <div class="clearfix"></div>
@@ -51,7 +51,7 @@
     <div class="clearfix"></div>
 
     <div id="round-chart">
-        <strong>By City</strong> (y-axis: Residents below the Poverty Line,     x-axis: 2017 City Population)
+        <strong>By City</strong> (y-axis: Residents below the Poverty Line in Thousands,     x-axis: 2017 City Population in Thousands)
         <a class="reset" href="javascript:roundChart.filterAll();dc.redrawAll();" style="display: none;  ">Reset</a>
 
         <div class="clearfix"></div>
@@ -187,8 +187,8 @@
                     .title(function (p) {
                         return p.key
                                 + "\n"
-                                + "Population: " + numberFormat(p.value.amountPopulation) // SF Value in tooltips hover
-                                + "  Poverty: " + numberFormat(p.value.poverty);  // SF Value in tooltips hover
+                                + "Population: " + numberFormat(p.value.amountPopulation) + " Thousand" // SF Value in tooltips hover
+                                + "  Poverty: " + numberFormat(p.value.poverty) + " Thousand";  // SF Value in tooltips hover
                     });
             industryChart.yAxis().tickFormat(function (s) {
                 return s;  // SF Value for y-axis City Chart; s can be divided by 10 to decrease chart values
@@ -227,8 +227,8 @@
                     .title(function (p) {
                         return p.key
                                 + "\n"
-                                + "Population: " + numberFormat(p.value.amountPopulation)  // SF Value in tooltips hover
-                                + "  Poverty: " + numberFormat(p.value.poverty);  // SF Value in tooltips hover
+                                + "Population: " + numberFormat(p.value.amountPopulation) + " Thousand"  // SF Value in tooltips hover
+                                + "  Poverty: " + numberFormat(p.value.poverty) + " Thousand";  // SF Value in tooltips hover
                     });
             roundChart.yAxis().tickFormat(function (s) {
                 return s;  // SF Value for y-axis City Chart; s can be divided by 10 to decrease chart values
