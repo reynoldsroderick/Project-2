@@ -33,7 +33,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome ():
-	return "Welcome to our app!"
+	return "Welcome to the Fastest Growing Real Estate Markets"
 	# return "For map, use the /map route"
 	# return "For SPLOM, use the /splom route" 
 	# return "For bubble, use the /bubble route"
